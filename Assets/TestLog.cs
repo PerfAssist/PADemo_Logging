@@ -23,14 +23,6 @@ public class TestLog : MonoBehaviour {
             Log.Info(null);
             Log.Info("test log info: {0} {1} {2}", 0, 3.5f, "foo");
 
-            Log.TODO(null);
-            Log.TODO("test TODO.");
-            Log.TODO("test TODO param {0}, {1}.", 1, "abc");
-
-            Log.Trace(null);
-            Log.Trace("test Trace.");
-            Log.Trace("test Trace param {0}, {1}.", 1, "abc");
-
             for (int i = 0; i < 20; i++)
                 Log.Info("repeat AAA.");
 
@@ -71,13 +63,13 @@ public class TestLog : MonoBehaviour {
 
     IEnumerator RunTimedLogging()
     {
-        Log.DeltaTime("init");
+        Log.Info("init");
         yield return new WaitForSeconds(0.2f);
-        Log.DeltaTime("sleep for 0.2s");
+        Log.Info("sleep for 0.2s");
         yield return new WaitForSeconds(0.3f);
-        Log.DeltaTime("sleep for 0.3s");
+        Log.Info("sleep for 0.3s");
         yield return new WaitForSeconds(0.4f);
-        Log.DeltaTime("sleep for 0.4s");
+        Log.Info("sleep for 0.4s");
         yield return new WaitForSeconds(0.3f);
 
         for (int i = 0; i < 100; i++)
